@@ -14,12 +14,18 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^8.15.16",
+    "@types/three": "^0.182.0",
     "classnames": "^2.5.1",
+    "framer-motion": "^12.23.28",
     "next": "^14.1.0",
     "next-seo": "^6.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-jsx-plugin-postcss": "^4.0.1"
+    "styled-jsx-plugin-postcss": "^4.0.1",
+    "tailwindcss": "^3.4.1",
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.1.0",
@@ -49,7 +55,6 @@
     "postcss": "^8.4.33",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
-    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
   "license": "ISC"

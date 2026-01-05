@@ -1,4 +1,5 @@
 import className from 'classnames';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
 type IVerticalFeatureRowProps = {
@@ -25,12 +26,29 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full text-center sm:w-1/2 sm:px-6">
-        <h3 className="text-3xl font-semibold text-gray-900">{props.title}</h3>
-        <div className="mt-6 text-xl leading-9">{props.description}</div>
+        <h3 className="font-serif text-3xl font-bold text-blue-900">
+          {props.title}
+        </h3>
+        <div className="mt-6 text-xl leading-9 text-gray-600">
+          {props.description}
+        </div>
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        {/* Rounded Image with no background blob */}
+        <motion.div
+          {...({
+            whileHover: { scale: 1.02 },
+            transition: { duration: 0.3 },
+          } as any)}
+          className="overflow-hidden rounded-3xl shadow-xl"
+        >
+          <img
+            src={`${router.basePath}${props.image}`}
+            alt={props.imageAlt}
+            className="h-auto w-full object-cover"
+          />
+        </motion.div>
       </div>
     </div>
   );

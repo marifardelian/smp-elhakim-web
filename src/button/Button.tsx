@@ -2,46 +2,27 @@ import className from 'classnames';
 
 type IButtonProps = {
   xl?: boolean;
+  full?: boolean;
   children: string;
 };
 
 const Button = (props: IButtonProps) => {
-  const btnClass = className({
-    btn: true,
-    'btn-xl': props.xl,
-    'btn-base': !props.xl,
-    'btn-primary': true,
-  });
+  const btnClass = className(
+    // 1. Base Shape & Animation
+    'inline-block rounded-full text-center transition-all hover:shadow-xl hover:-translate-y-1',
 
-  return (
-    <div className={btnClass}>
-      {props.children}
+    // 2. Color (Navy Blue from your logo)
+    'bg-blue-900 hover:bg-blue-800 text-white',
 
-      <style jsx>
-        {`
-          .btn {
-            @apply inline-block rounded-md text-center;
-          }
-
-          .btn-base {
-            @apply text-lg font-semibold py-2 px-4;
-          }
-
-          .btn-xl {
-            @apply font-extrabold text-xl py-4 px-6;
-          }
-
-          .btn-primary {
-            @apply text-white bg-primary-500;
-          }
-
-          .btn-primary:hover {
-            @apply bg-primary-600;
-          }
-        `}
-      </style>
-    </div>
+    // 3. Conditional Sizing
+    {
+      'text-lg font-semibold py-4 px-10': props.xl,
+      'text-lg font-semibold py-2 px-6': !props.xl,
+      'w-full': props.full,
+    },
   );
+
+  return <div className={btnClass}>{props.children}</div>;
 };
 
 export { Button };
