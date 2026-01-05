@@ -1,6 +1,7 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
+  site_name: 'SMP El-Hakim',
+  title: 'SMP Islam Cendekia El-Hakim',
+  description:
+    "Building the generation of Qur'anic Leaders with modern science and character in Aceh Besar.",
   locale: 'en',
 };
