@@ -165,7 +165,7 @@ const Extracurricular = () => {
               className="group relative h-64 cursor-pointer overflow-hidden rounded-3xl shadow-2xl md:h-[400px]"
             >
               <img
-                src="/JAMBORE.png"
+                src="/jambore.png"
                 alt="Scout Jambore"
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
